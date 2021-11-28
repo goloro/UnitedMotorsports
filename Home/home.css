@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/* NAV Y MENU DESPLEGABLE */
+nav {
+    background-color: #1c1b24;
+}
+.menu {
+    background-color: #1c1b24;
+}
+.menu a:hover {
+    background-color: rgb(122, 119, 119)
+}
+
+/* BODY */
+body {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("../Images/fondo.jpg");
+    backdrop-filter: blur(5px);
+}
+
+/* CONTENEDOR TARJETAS F1 Y MOTOGP */
+section {
+    width: 100%;
+}
+.contentHome {
+    padding-top: 6%;
+    padding-bottom: 6%;
+    display: grid;
+    gap: 50px;
+    grid-template-columns: auto auto;
+}
+.F1{
+    background-color: #ff1601c5;
+    margin-left: 50%;
+    border-radius: 10px;
+    display: grid;
+    grid-template-rows: auto auto auto;
+    max-width: 50%;
+    
+}
+.MGP{
+    background-color: #d90042e5;
+    border-radius: 10px;
+    display: grid;
+    grid-template-rows: auto auto auto;
+    max-width: 50%;
+}
+#logoF1 {
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#logoMGP {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+}
+.contentHome p {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    max-width: 275px;
+    font-family: 'Mukta', sans-serif;
+    color: white;
+}
+#coleccionF1, #coleccionMGP {
+    width: 90%;
+    height: 250px;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    box-shadow: 0px 0px 8px rgba(255, 255, 255, 0.733);
+    object-fit: cover;
+}
+#coleccionMGP {
+    margin-top: 56px;
+}
+.contentHome a {
+    font-family: 'Oswald', sans-serif;
+    color: white;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 7.5px;
+    text-decoration: none;
+    border: 1px solid white;
+    border-radius: 8px;
+}
+.contentHome a:hover {
+    background-color: white;
+    color: black;
+}
+
+/* FOOTER */
+footer {
+    background-color: #1c1b24;
+}

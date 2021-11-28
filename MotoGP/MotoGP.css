@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* NAV Y MENU DESPLEGABLE */
+nav {
+    background-color: #d90042;
+}
+.menu {
+    background-color: #d90042;
+}
+.menu a:hover {
+    background-color: #eb2963;
+}
+
+/* BODY */
+body {
+    background-color: #282a2b;
+}
+
+/* FOOTER */
+footer {
+    background-color: #d90042;
+}

@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/* NAV Y MENU DESPLEGABLE */
+nav {
+    background-color: #1c1b24;
+}
+.menu {
+    background-color: #1c1b24;
+}
+.menu a:hover {
+    background-color: rgb(122, 119, 119)
+}
+
+/* BODY */
+body {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("https://www.f1-fansite.com/wp-content/uploads/2012/09/F1-Fansite.com-HD-Wallpaper-2011-Spain-F1-GP_26.jpg");
+    backdrop-filter: blur(5px);
+}
+/* NO HAY RESULTADO */
+.resultado2 {
+    display: flex;
+    position: absolute;
+    margin: 6% 40% 0 40%;
+    color: white;
+    font-size: 30px;
+    font-family: 'Rubik', sans-serif;
+}
+#resultado {
+    display: none;
+}
+/* CONTENEDOR ITEMS ENCONTRADOS */
+section {
+    margin-top: 50px;
+    min-height: 100vh;
+}
+
+/* FOOTER */
+footer {
+    background-color: #1c1b24;
+}
