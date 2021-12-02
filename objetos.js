@@ -8,19 +8,6 @@ export class Objeto {
         this.valor = (Math.random()*1).toFixed(2)
         this.descrip = descrip
     }
-
-    getData() {
-        console.log("Tipo: " + this.tipo + " | Nombre: " + this.nombre + " | URL: " + this.url)
-    }
-    getTipo() {
-        return this.tipo
-    }
-    getNombre() {
-        return this.nombre
-    }
-    getUrl() {
-        return this.url
-    }
 }
 
 export function estructura(obj) {
@@ -153,47 +140,6 @@ export function crearMGPEspecial() {
     return ArrMGPCascos
 }
 
-// EVENT LISTENER FAVORITOS
-var section = document.querySelector("section");
-
-section.addEventListener('click', e=> {
-    const icon = e.target;
-    if (icon.classList.contains('fav-icon')) {
-        if (comprobarPerfil()) {
-            if(icon.src.endsWith('/Images/FavoritoClick.svg')) {
-                icon.src = "../Images/Favorito.svg"
-                removeFavorito(icon.id)
-            }
-            else {
-                icon.src = "../Images/FavoritoClick.svg"
-                addFavorito(icon.id)
-            }
-        }
-    }
-
-})
-
-// COMPROBAR PERFILES REGISTRADOS
-function comprobarPerfil() {
-    let perfiles = JSON.parse(localStorage.getItem("perfiles"))
-    let flag
-
-    if (perfiles != null) {
-        for (let i=0; i<perfiles.length; i++) {
-            if(perfiles[i].registrado === true) {
-                flag = true
-                break
-            } else {
-                flag = false
-            }
-        }
-    } else {
-        flag = false
-    }
-
-    return flag
-}
-
 // CONCATENAR TODOS LOS ARRAYS
 export function allObjects() {
     var arr1 = crearF1Normales()
@@ -208,11 +154,29 @@ export function allObjects() {
     return objects
 }
 
+// EVENT LISTENER FAVORITOS
+var section = document.querySelector("section");
+
+section.addEventListener('click', e=> {
+    const icon = e.target;
+    if (icon.classList.contains('fav-icon')) {
+        if(icon.src.endsWith('/Images/FavoritoClick.svg')) {
+            icon.src = "../Images/Favorito.svg"
+            removeFavorito(icon.id)
+        }
+        else {
+            icon.src = "../Images/FavoritoClick.svg"
+            addFavorito(icon.id)
+        }
+    }
+
+})
+
 // ENCONTRAR OBJETOS POR NOMBRE
 function encontrarObjeto(nombre) {
     var id = parseInt(nombre)
     var objetos = allObjects()
-    let encontrado = ""
+    let encontrado
     objetos.forEach(e => {
         if(e.id ===  id) {
             encontrado = e
@@ -221,45 +185,32 @@ function encontrarObjeto(nombre) {
     return encontrado
 }
 
-// GUARDAR FAVORITOS EN EL PERFIL LOGUEADO
-function addFavorito(clase) {
-    let perfiles = JSON.parse(localStorage.getItem("perfiles"))
+// GUARDAR FAVORITOS
+function addFavorito(id) {
+    let favorito = encontrarObjeto(id)
+    let favs
 
-    for (let i=0; i<perfiles.length; i++) {
-        if(perfiles[i].registrado === true) {
-            let perfil = perfiles[i]
-            let objeto = encontrarObjeto(clase)
-            if (objeto != "")
-                perfil.favs.push(objeto)
+    if (JSON.parse(localStorage.getItem("favs")) == null) {
+        favs = []
 
-            perfiles.splice(i,1)
-            perfiles.push(perfil)
-            localStorage.setItem('perfiles', JSON.stringify(perfiles))
-            break
-        }
+    } else {
+        favs = JSON.parse(localStorage.getItem("favs"))
     }
+
+    favs.push(favorito)
+
+    localStorage.setItem("favs", JSON.stringify(favs))
 }
 
-// ELIMINAR FAVORITOS EN EL PERFIL LOGUEADO
-function removeFavorito(clase) {
-    let perfiles = JSON.parse(localStorage.getItem("perfiles"))
+// ELIMINAR FAVORITOS
+function removeFavorito(id) {
+    let favs = JSON.parse(localStorage.getItem("favs"))
 
-    for (let i=0; i<perfiles.length; i++) {
-        if(perfiles[i].registrado === true) {
-            let perfil = perfiles[i]
-            let favoritos = perfil.favs
-            for(let j=0; j<favoritos.length; j++) {
-                if (favoritos[j].id == clase) {
-                    // Actualizar Favoritos
-                    perfil.favs.splice(j,1)
-
-                    // Actualizar Perfil
-                    perfiles.splice(i,1)
-                    perfiles.push(perfil)
-                    localStorage.setItem('perfiles', JSON.stringify(perfiles))
-                    location.reload();
-                }
-            }
+    for (let i=0; i<favs.length; i++) {
+        if (favs[i].id == id) {
+            favs.splice(i, 1)
         }
-    }
+    };
+
+    localStorage.setItem("favs", JSON.stringify(favs))
 }

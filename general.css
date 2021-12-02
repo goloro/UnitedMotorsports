@@ -42,198 +42,8 @@ nav {
     margin: auto 0px auto 1%;
 }
 
-/* MENU DESPLEGABLE */
-.perfil {
-    position: relative;
-    display: inline-block;
-    margin: 15px 4% 0px auto;
-}
-.menu {
-    display: none;
-    position: absolute;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(80, 78, 78, 0.555);
-    right: 0;
-    border-radius: 5px;
-    z-index: 3;
-}
-.menu a {
-    font-family: 'Rubik', sans-serif;
-    color: white;
-    padding: 14px 18px;
-    text-decoration: none;
-    display: block;
-    border-radius: 3px;
-    cursor: pointer;
-}
-.menu img {
-    margin-right: 10px;
-    vertical-align: middle;
-}
-.show {
-    display:block;
-}
 #profileIcon {
-    margin: auto 0px auto 4%;
-    cursor: pointer;
-}
-
-/* VENTANAS FLOTANES */
-.claseLogin, .claseSignUp, .claseProfile {
-    display: none;
-    position: absolute;
-    height: 400px;
-    width: 450px;
-    top: calc(40% - 210px);
-    left: calc(50% - 225px);
-    border-radius: 10px;
-    background-color: #1c1b24;
-}
-.claseSignUp {
-    height: 550px;
-}
-.claseProfile {
-    width: 1100px;
-    height: 600px;
-    top: calc(40% - 260px);
-    left: calc(50% - 550px);
-}
-.claseProfileContent {
-    display: grid;
-    grid-template-columns: auto auto;
-}
-.LoginContent, .SignUpContent, .datosProfile, .imagenProfile {
-    display: flex;
-    flex-direction: column;
-}
-.datosProfile, .imagenProfile {
-    margin: 50px;
-}
-#CloseLogin, #CloseSignUp, #CloseProfile {
-    display: flex;
-    margin: 10px 10px 0px auto;
-}
-#UserIcon {
-    margin: 10px 0px 40px 175px;
-    margin-left: 175px;
-    margin-top: 10px;
-    margin-bottom: 40px;
-}
-.Formulario {
-    display: flex;
-    flex-direction: column;
-    margin-left: auto;
-    margin-right: auto;
-}
-.CampoForm {
-    display: flex;
-    width: 250px;
-    background-color: rgb(255, 255, 255);
-    border-radius: 5px  ;
-    height: 30px;
-    margin-top: 20px;
-}
-.CampoForm input {
-    width: 200px;
-    margin-top: auto;
-    margin-bottom: auto;
-    background-color: transparent;
-    border: none;
-    height: 100%;
-    margin-left: 15px;
-    outline: none;
-}
-.CampoForm img {
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-left: 10px;
-}
-.Formulario a {
-    color: white;
-    font-family: 'Rubik', sans-serif;
-    font-size: 10px;
-    margin-top: 10px;
-    margin-left: auto;
-    cursor: pointer;
-}
-#resultadoForm, #resultadoFormLogin, #resultadoFormPerfil {
-    display: none;
-    margin-top: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    color: red;
-    font-family: 'Rubik', sans-serif;
-    font-size: 14px;
-}
-#LoginForm, #SignUpForm, #UpdateProfileForm {
-    margin-top: 30px;
-    font-size: 20px;
-    font-family: 'Rubik', sans-serif;
-    color: #1c1b24;
-    width: 100px;
-    border-radius: 5px;
-    border: none;
-    padding: 5px 0px 5px 0px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 20px;
-    cursor: pointer;
-}
-#UpdateProfileForm {
-    width: 150px;
-}
-.showLogin {
-    display:block;
-}
-.ocultarLogin {
-    display: none;
-}
-
-/* EDITAR PERFIL */
-#nombreProfile {
-    text-align: center;
-    font-family: 'Rubik', sans-serif;
-    color: white;
-    font-size: 40px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 40px;
-    margin-top: 30px;
-    text-transform: uppercase;
-}
-.imagenProfile {
-    display: flex;
-}
-#imagenProfileSeleccionada {
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: -15px;
-    border-radius: 10px;
-    border: 2px solid black;
-}
-#imagenProfileSeleccionada:hover {
-    box-shadow: 0px 4px 20px 0px white;
-}
-.SeccionImages {
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 40px;
-    display: grid;
-    grid-template-columns: auto auto auto auto auto;
-    grid-gap: 10px;
-    background-color: #e6ebec;
-    border: 10px solid #e6ebec;
-    border-radius: 8px;
-}
-.SeccionImages img {
-    border-radius: 4px;
-    box-sizing: border-box;
-    cursor: pointer;
-}
-.SeccionImages img:hover {
-    border: 1px solid black;
-}
-#CloseLogin, #CloseSignUp, #CloseProfile {
+    margin: auto 4% auto 2%;
     cursor: pointer;
 }
 
@@ -334,7 +144,7 @@ footer {
 }
 .claseFooter {
     display: flex;
-    width: 20.3%;
+    width: 30.3%;
     margin: 0px auto 0px auto;
 }
 #logofooter, #author, #logoPers {
@@ -342,9 +152,10 @@ footer {
     margin-bottom: auto;
 }
 #logofooter, #author {
-    margin-right: 20%;
+    margin-right: 10%;
 }
 #author {
     color: white;
     font-family: 'Rubik', sans-serif;
+    text-align: center;
 }

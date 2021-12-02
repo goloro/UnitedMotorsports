@@ -33,19 +33,13 @@ estructura(MGPCascos)
 var arrMGP = MGP2021.concat(MGPCascos)
 
 // SELECCIONAR LOS FAVORITOS
-let perfiles = JSON.parse(localStorage.getItem("perfiles"))
+let favs = JSON.parse(localStorage.getItem("favs"))
 
-if (perfiles != null) {
-    perfiles.forEach(e => {
-        if(e.registrado === true) {
-            let favoritos = e.favs
-    
-            favoritos.forEach(f => {
-                if (f.deporte === "MotoGP") {
-                    var favorito = arrMGP.filter(j => j.id === f.id)
-                    document.getElementById(favorito[0].id).src = "../Images/FavoritoClick.svg"
-                }
-            })
+if (favs != null) {
+    favs.forEach(e => {   
+        if (e.deporte === "MotoGP") {
+            var favorito = arrMGP.filter(j => j.id === e.id)
+            document.getElementById(favorito[0].id).src = "../Images/FavoritoClick.svg"
         }
-    })
+    });
 }

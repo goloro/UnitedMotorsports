@@ -42,19 +42,13 @@ estructura(F1_Motos)
 var arrF1 = F1_2021.concat(F1_Francesco, F1_Motos)
 
 //SELECCIONAR LOS FAVORITOS
-let perfiles = JSON.parse(localStorage.getItem("perfiles"))
+let favs = JSON.parse(localStorage.getItem("favs"))
 
-if (perfiles != null) {
-    perfiles.forEach(e => {
-        if(e.registrado === true) {
-            let favoritos = e.favs
-    
-            favoritos.forEach(f => {
-                if (f.deporte === "F1") {
-                    var favorito = arrF1.filter(j => j.id === f.id)
-                    document.getElementById(favorito[0].id).src = "../Images/FavoritoClick.svg"
-                }
-            });
+if (favs != null) {
+    favs.forEach(e => {   
+        if (e.deporte === "F1") {
+            var favorito = arrF1.filter(j => j.id === e.id)
+            document.getElementById(favorito[0].id).src = "../Images/FavoritoClick.svg"
         }
     });
 }
