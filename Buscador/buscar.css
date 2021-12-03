@@ -15,10 +15,7 @@ nav {
 
 /* BODY */
 body {
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-image: url("https://www.f1-fansite.com/wp-content/uploads/2012/09/F1-Fansite.com-HD-Wallpaper-2011-Spain-F1-GP_26.jpg");
-    backdrop-filter: blur(5px);
+    background-color: #282a2b;
 }
 /* NO HAY RESULTADO */
 .resultado2 {

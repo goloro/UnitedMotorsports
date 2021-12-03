@@ -185,6 +185,24 @@ function encontrarObjeto(nombre) {
     return encontrado
 }
 
+// HOVER FAVORITOS
+section.addEventListener('mouseover', e=> {
+    const icon = e.target;
+    if (icon.classList.contains('fav-icon')) {
+        if(icon.src.endsWith('/Images/Favorito.svg')) {
+            icon.src = "../Images/FavoritoHover.svg"
+        }
+    }
+})
+section.addEventListener('mouseout', e=> {
+    const icon = e.target;
+    if (icon.classList.contains('fav-icon')) {
+        if(icon.src.endsWith('/Images/FavoritoHover.svg')) {
+            icon.src = "../Images/Favorito.svg"
+        }
+    }
+})
+
 // GUARDAR FAVORITOS
 function addFavorito(id) {
     let favorito = encontrarObjeto(id)
