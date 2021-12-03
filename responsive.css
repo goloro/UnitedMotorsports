@@ -1,0 +1,36 @@
+@media screen and (max-width: 1500px) and (min-width: 450px) {
+    .F1 {
+        margin-left: 40%;
+        max-width: 60%;
+    }
+    .MGP {
+        max-width: 60%;
+    }
+    #coleccionF1, #coleccionMGP {
+        height: 200px;
+    }
+    
+    .content {
+        grid-template-columns: auto auto auto;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .contentHome {
+        grid-template-columns: auto;
+        gap: 80px;
+        padding-bottom: 20%;
+        padding-top: 20%;
+    }
+    .F1, .MGP {
+        margin-left: 10%;
+        max-width: 80%;
+    }
+    #coleccionF1, #coleccionMGP {
+        height: 150px;
+    }
+
+    .content {
+        grid-template-columns: auto auto;
+    }
+}
