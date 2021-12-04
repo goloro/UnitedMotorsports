@@ -27,7 +27,7 @@ nav {
     margin: 1px 0px 0px 10px;
     outline: none;
 }
-#ButtonF1, #ButtonMGP, #ButtonF1Res, #ButtonMGPRes {
+#ButtonF1, #ButtonMGP, #ButtonF1Res, #ButtonMGPRes, #profileIconRes {
     font-size: 16px;
     font-family: 'Rubik', sans-serif;
     text-decoration: none;
@@ -42,12 +42,36 @@ nav {
     margin: auto 0px auto 1%;
 }
 
-#profileIcon, #profileIconRes {
+#profileIcon {
     margin: auto 4% auto 2%;
     cursor: pointer;
 }
 .MenuResponsive {
-    margin: auto 4% auto auto;
+    position: relative;
+    display: inline-block;
+    margin: 15px 4% 0px auto;
+}
+.subMenuRes {
+    display: none;
+    position: absolute;
+    top: 60px;
+    min-width: 100%;
+    min-height: 10%;
+    z-index: 3;
+    background-color: #1c1b24;
+}
+.subMenuRes div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 10%;
+    margin-top: 4%;
+}
+.showMenuRes{
+    display: flex;
+}
+.filtro {
+    filter: blur(10px);
 }
 
 /* ITEMS */

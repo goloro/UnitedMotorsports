@@ -23,9 +23,12 @@
 }
 
 /* MOVIL */
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 450px) {
     .search, #ButtonF1, #ButtonMGP, #profileIcon {
         display: none;
+    }
+    .searchRes, #ButtonF1Res, #ButtonMGPRes, #profileIconRes {
+        margin: 6% auto 0% auto;
     }
     .MenuResponsive {
         display: flex;
