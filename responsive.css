@@ -23,7 +23,7 @@
 }
 
 /* MOVIL */
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 650px) {
     .search, #ButtonF1, #ButtonMGP, #profileIcon {
         display: none;
     }
