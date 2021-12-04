@@ -26,17 +26,19 @@
             <a id="profileIcon" href="../Favoritos/favoritos.html"><img id="PerfilIcon" src="../Images/FavoritoWhite.svg" width="30" height="30"></a>
             
             <div class="MenuResponsive">
-                <img src="../Images/MenuResponsive.svg" width="40" height="40">
-                <!-- <div class="subMenuResponsive">
-                    <form class="search">
-                        <img id="search" src="../Images/SearchIcon.png" alt="SearchIcon">
+                <img id="menuRes" src="../Images/MenuResponsive.svg" width="40" height="40"> 
+            </div>
+            <div id="idSubMenuRes" class="subMenuRes">
+                <div>
+                    <form class="searchRes">
+                        <img id="searchRes" src="../Images/SearchIcon.png" alt="SearchIcon">
                         <input id="buscador" type="search" placeholder="Search items...">
                     </form>
-                    <a href="../F1/F1.html" id="ButtonF1">F1</a>
-                    <a href="../MotoGP/MotoGP.html" id="ButtonMGP">MotoGP</a>
-                    <a id="profileIcon" href="../Favoritos/favoritos.html"><img id="PerfilIcon" src="../Images/FavoritoWhite.svg" width="30" height="30"></a>
-                </div>   -->
-            </div>
+                    <a href="../F1/F1.html" id="ButtonF1Res" onmouseover="botonInF1()" onmouseout="navDefault()">F1</a>
+                    <a href="../MotoGP/MotoGP.html" id="ButtonMGPRes" onmouseover="botonInMGP()" onmouseout="navDefault()">MotoGP</a>
+                    <a id="profileIconRes" href="../Favoritos/favoritos.html">Favorites</a>
+                </div>
+            </div> 
         </nav>
 
         <!-- NO RESULTADO / APARECE CUANDO NO HAY RESULTADOS A UNA BÚSQUEDA-->
@@ -61,5 +63,6 @@
         <!-- DECLARAMOS LOS SCRIPTS -->
         <script src="buscar.js" type="module"></script>
         <script src="../buscador.js"></script>
+        <script src="../menuResponsive.js"></script>
     </body>
 </html> 

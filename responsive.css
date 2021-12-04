@@ -1,4 +1,5 @@
-@media screen and (max-width: 1500px) and (min-width: 450px) {
+/* PC */
+@media screen and (max-width: 1500px) and (min-width: 1000px) {
     .search, #ButtonF1, #ButtonMGP, #profileIcon {
         display: flex;
     }
@@ -19,6 +20,38 @@
     
     .content {
         grid-template-columns: auto auto auto;
+    }
+}
+
+/* TABLET */
+@media screen and (max-width: 1000px) and (min-width: 830px) {
+    .search {
+        margin-left: 6%;
+    }
+    #ButtonF1 {
+        margin-left: 6%;
+    }
+}
+@media screen and (max-width: 830px) and (min-width: 450px) {
+    .search, #ButtonF1, #ButtonMGP, #profileIcon {
+        display: none;
+    }
+    .searchRes, #ButtonF1Res, #ButtonMGPRes, #profileIconRes {
+        margin: 6% auto 0% auto;
+    }
+
+    .contentHome {
+        grid-template-columns: auto;
+        gap: 80px;
+        padding-bottom: 20%;
+        padding-top: 20%;
+    }
+    .F1, .MGP {
+        margin-left: 10%;
+        max-width: 80%;
+    }
+    #coleccionF1, #coleccionMGP {
+        height: 350px;
     }
 }
 
