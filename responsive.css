@@ -1,4 +1,11 @@
 @media screen and (max-width: 1500px) and (min-width: 450px) {
+    .search, #ButtonF1, #ButtonMGP, #profileIcon {
+        display: flex;
+    }
+    .MenuResponsive {
+        display: none;
+    }
+    
     .F1 {
         margin-left: 40%;
         max-width: 60%;
@@ -15,7 +22,15 @@
     }
 }
 
+/* MOVIL */
 @media screen and (max-width: 450px) {
+    .search, #ButtonF1, #ButtonMGP, #profileIcon {
+        display: none;
+    }
+    .MenuResponsive {
+        display: flex;
+    }
+    
     .contentHome {
         grid-template-columns: auto;
         gap: 80px;
@@ -31,6 +46,10 @@
     }
 
     .content {
-        grid-template-columns: auto auto;
+        grid-template-columns: auto ;
+    }
+
+    .claseFooter {
+        width: 80%;
     }
 }

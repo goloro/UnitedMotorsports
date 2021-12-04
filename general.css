@@ -6,7 +6,7 @@ nav {
 #logo{
     margin: 5px 0% 5px 3%;
 }
-.search {
+.search, .searchRes {
     display: flex;
     background-color: #e6ebec;
     height: 30px;
@@ -15,11 +15,11 @@ nav {
     border-radius: 8px;
     box-shadow: 2px 2px 10px 0px rgba(126, 124, 124, 0.486);
 }
-#search {
+#search, #searchRes {
     height: 26px;
     margin: 2px 0px 0px 5px;
 }
-.search input {
+.search input, .searchRes input {
     background-color: transparent;
     border: none;
     height: 28px;
@@ -27,7 +27,7 @@ nav {
     margin: 1px 0px 0px 10px;
     outline: none;
 }
-#ButtonF1, #ButtonMGP {
+#ButtonF1, #ButtonMGP, #ButtonF1Res, #ButtonMGPRes {
     font-size: 16px;
     font-family: 'Rubik', sans-serif;
     text-decoration: none;
@@ -35,16 +35,19 @@ nav {
     padding: 15px 30px 15px 30px;
     border-radius: 12px;
 }
-#ButtonF1 {
+#ButtonF1, #Buttonf1Res {
     margin: auto 0px auto 18%;
 }
-#ButtonMGP {
+#ButtonMGP, #ButtonMGPRes {
     margin: auto 0px auto 1%;
 }
 
-#profileIcon {
+#profileIcon, #profileIconRes {
     margin: auto 4% auto 2%;
     cursor: pointer;
+}
+.MenuResponsive {
+    margin: auto 4% auto auto;
 }
 
 /* ITEMS */

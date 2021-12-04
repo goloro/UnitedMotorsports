@@ -231,4 +231,5 @@ function removeFavorito(id) {
     };
 
     localStorage.setItem("favs", JSON.stringify(favs))
+    location.reload()
 }
